@@ -58,25 +58,25 @@ namespace SystemMonitor
 
         private void check_Click(object sender, RoutedEventArgs e)
         {
-            float CPU = functions.GetCpuUsage();
-            List<string> diskinfo = functions.DiscInfo();
-            List<string> operatingSystem = functions.Operating_System();
-            List<string> network = functions.DataTransmissionAndReception();
-            //ProcessDisplay();
-            cpu.Text = "Загрузка ЦПУ: " + CPU + "%";
-            diskname.Text = "Имя диска: " + diskinfo[0] ;
-            all.Text = "Всего: " + diskinfo[1] + " Гб";
-            zanyato.Text = "Свободно: " + diskinfo[3] + " Гб"; 
-            free.Text = "Занято: " + diskinfo[2] + " Гб";
-            system.Text = "Операционная система: " + operatingSystem[0];
-            name_pc.Text = "Имя компьютера: " + operatingSystem[1];
-            count.Text = "Число процессоров: " + operatingSystem[2];
-            ethernet.Text = network[0];
-            speedon.Text = "Скорость передачи: " + network[1] + " Мб";
-            speedout.Text = "Скорость приема: " + network[2] + " Мб";
-            wifi.Text =  network[3];
-            speedon2.Text = "Скорость передачи: " + network[4] + " Мб";
-            speedout2.Text = "Скорость приема: " + network[5] + " Мб";
+                float CPU = functions.GetCpuUsage();
+                List<string> diskinfo = functions.DiscInfo();
+                List<string> operatingSystem = functions.Operating_System();
+                List<string> network = functions.DataTransmissionAndReception();
+                //ProcessDisplay();
+                cpu.Text = "Загрузка ЦПУ: " + CPU + "%";
+                diskname.Text = "Имя диска: " + diskinfo[0];
+                all.Text = "Всего: " + diskinfo[1] + " Гб";
+                zanyato.Text = "Свободно: " + diskinfo[3] + " Гб";
+                free.Text = "Занято: " + diskinfo[2] + " Гб";
+                system.Text = "Операционная система: " + operatingSystem[0];
+                name_pc.Text = "Имя компьютера: " + operatingSystem[1];
+                count.Text = "Число процессоров: " + operatingSystem[2];
+                ethernet.Text = network[0];
+                speedon.Text = "Скорость передачи: " + network[1] + " Мб";
+                speedout.Text = "Скорость приема: " + network[2] + " Мб";
+                wifi.Text = network[3];
+                speedon2.Text = "Скорость передачи: " + network[4] + " Мб";
+                speedout2.Text = "Скорость приема: " + network[5] + " Мб";
         }
     }
 }

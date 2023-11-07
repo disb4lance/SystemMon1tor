@@ -34,11 +34,8 @@ namespace SystemMonitor
             bool? result = saveFileDialog.ShowDialog();
             if (result == true)
             {
-                // Получите выбранный путь к файлу
                 string filePath = saveFileDialog.FileName;
                 SecureString securePassword = password.SecurePassword;
-
-                // Преобразуйте SecureString в обычную строку
                 IntPtr ptr = System.Runtime.InteropServices.Marshal.SecureStringToBSTR(securePassword);
                 string password1 = System.Runtime.InteropServices.Marshal.PtrToStringBSTR(ptr);
 
@@ -46,7 +43,6 @@ namespace SystemMonitor
 
                 try
                 {
-                    // Используйте StreamWriter для записи данных в выбранный файл
                     using (StreamWriter writer = new StreamWriter(filePath))
                     {
                         if (login1.Length <= 8 && password1.Length == 8)
@@ -71,20 +67,17 @@ namespace SystemMonitor
         {
             Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
 
-            // Установите фильтр для выбора только текстовых файлов
             openFileDialog.Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";
 
-            // Откройте диалоговое окно открытия файла и получите результат
             bool? result = openFileDialog.ShowDialog();
 
             if (result == true)
             {
-                // Получите путь к выбранному файлу
+
                 string filePath = openFileDialog.FileName;
 
                 try
                 {
-                    // Используйте StreamReader для чтения данных из выбранного файла
                     using (StreamReader reader = new StreamReader(filePath))
                     {
                         string line1 = reader.ReadLine();
