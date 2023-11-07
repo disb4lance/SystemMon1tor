@@ -1,0 +1,28 @@
+﻿<Window x:Class="SystemMonitor.monitor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemMonitor"
+        mc:Ignorable="d"
+        Title="monitor" Height="400" Width="300" WindowStyle="None" 
+        AllowsTransparency="True" MouseLeftButtonDown="Window_MouseLeftButtonDown" MouseMove="Window_MouseMove" >
+    <Grid>
+        <TextBox x:Name="cpu" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Загрузка ЦПУ" VerticalAlignment="Top" Width="120" FontSize="8"/>
+        <Button x:Name="check" Content="Узнать" HorizontalAlignment="Left" Margin="25,300,0,0" VerticalAlignment="Top" Click="check_Click" Width="246" Height="65"/>
+        <TextBox x:Name="diskname" HorizontalAlignment="Left" Margin="10,40,0,0" TextWrapping="Wrap" Text="Имя диска" VerticalAlignment="Top" Width="120" FontSize="8" />
+        <TextBox x:Name="all" HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" Text="Всего памяти" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.375,1.002" FontSize="8"/>
+        <TextBox x:Name="zanyato" HorizontalAlignment="Left" Margin="10,100,0,0" TextWrapping="Wrap" Text="Свободно" VerticalAlignment="Top" Width="120" FontSize="8" RenderTransformOrigin="0.583,-1.018" />
+        <TextBox x:Name="free" HorizontalAlignment="Left" Margin="10,130,0,0" TextWrapping="Wrap" Text="Занято" VerticalAlignment="Top" Width="120" FontSize="8"/>
+        <TextBox x:Name="system" HorizontalAlignment="Left" Margin="10,160,0,0" TextWrapping="Wrap" Text="Операцинная система" VerticalAlignment="Top" Width="120" FontSize="8"/>
+        <TextBox x:Name="name_pc" HorizontalAlignment="Left" Margin="10,190,0,0" TextWrapping="Wrap" Text="Имя компьютера" VerticalAlignment="Top" Width="120" FontSize="8"/>
+        <TextBox x:Name="count" HorizontalAlignment="Left" Margin="10,220,0,0" TextWrapping="Wrap" Text="Число процессоров" VerticalAlignment="Top" Width="120" FontSize="8"/>
+        <TextBox x:Name="ethernet" HorizontalAlignment="Left" Margin="165,10,0,0" TextWrapping="Wrap" Text="Имя интерфейса" VerticalAlignment="Top" Width="120" FontSize="8"/>
+        <TextBox x:Name="speedon" HorizontalAlignment="Left" Margin="165,40,0,0" TextWrapping="Wrap" Text="Скорость передачи" VerticalAlignment="Top" Width="120" FontSize="8" />
+        <TextBox x:Name="speedout" HorizontalAlignment="Left" Margin="165,70,0,0" TextWrapping="Wrap" Text="Скорость приема" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.375,1.002" FontSize="8"/>
+        <TextBox x:Name="wifi" HorizontalAlignment="Left" Margin="165,100,0,0" TextWrapping="Wrap" Text="Имя интерфейса" VerticalAlignment="Top" Width="120" FontSize="8" RenderTransformOrigin="0.583,-1.018" />
+        <TextBox x:Name="speedon2" HorizontalAlignment="Left" Margin="165,130,0,0" TextWrapping="Wrap" Text="Скорость передачи" VerticalAlignment="Top" Width="120" FontSize="8"/>
+        <TextBox x:Name="speedout2" HorizontalAlignment="Left" Margin="165,160,0,0" TextWrapping="Wrap" Text="Скорость приема" VerticalAlignment="Top" Width="120" FontSize="8"/>
+
+    </Grid>
+</Window>
